@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<!--    <div id="app">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -31,14 +31,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    &lt;!&ndash; Left Side Of Navbar &ndash;&gt;
                     <ul class="navbar-nav me-auto">
-
                     </ul>
 
-                    &lt;!&ndash; Right Side Of Navbar &ndash;&gt;
                     <ul class="navbar-nav ms-auto">
-                        &lt;!&ndash; Authentication Links &ndash;&gt;
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -74,25 +70,10 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
-
         </main>
-    </div>-->
-<div id="app">
-    <nav>
-        <ul>
-            <li><router-link to="/etudiants">Etudiants</router-link></li>
-            <li><router-link to="/formations">Formations</router-link></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <router-view>
-            <h1>sfsdasdassdasddf</h1>
-        </router-view>
     </div>
-</div>
 <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

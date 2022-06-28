@@ -12,4 +12,8 @@ class Etudiant extends Model
     protected $fillable = [
         'cne', 'prenom','nom','bac_type','date_naissance','formation_id'
     ];
+
+    public  function formation(){
+        return $this->belongsTo(Formation::class);
+    }
 }

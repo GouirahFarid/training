@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EtudianPostRequest;
+use App\Http\Requests\EtudiantPutRequest;
 use App\Models\Etudiant;
 use App\Models\Formation;
 use Illuminate\Http\Request;
 
 class EtudiantController extends Controller
 {
-    public function create(Request  $request){
+    public function create(EtudianPostRequest $request){
         $formation=Formation::query()->find($request->formationId);
         if (!$formation)
             return  response()->json([
@@ -27,7 +29,7 @@ class EtudiantController extends Controller
             'date_naissance'=>$request->dateNaissance,
         ]);
     }
-    public function update(Request  $request){
+    public function update(EtudiantPutRequest  $request){
         $formation=Formation::query()->find($request->formationId);
         if (!$formation)
             return  response()->json([
