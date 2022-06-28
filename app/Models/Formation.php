@@ -11,6 +11,7 @@ class Formation extends Model
     protected $fillable = [
         'titre', 'heures'
     ];
+    protected $withCount=['etudiants'];
     public  function etudiants(){
         return $this->hasMany(Etudiant::class);
     }
