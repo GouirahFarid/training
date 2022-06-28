@@ -29,6 +29,6 @@ class FormationController extends Controller
         return Formation::query()->find($request->formationId)->first();
     }
     public function all(Request  $request){
-        return Formation::query()->paginate(20);
+        return Formation::all();
     }
 }

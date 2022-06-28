@@ -15,7 +15,7 @@ class EtudiantController extends Controller
         if (!$formation)
             return  response()->json([
                 'message'=>"Formation not found",
-            ],404);
+            ],422);
         $etudiant=$formation->etudiants()->where('etudiants.cne',$request->cne)->first('etudiants.id');
         if ($etudiant)
             return  response()->json([
@@ -34,13 +34,14 @@ class EtudiantController extends Controller
         if (!$formation)
             return  response()->json([
                 'message'=>"Formation not found",
-            ],404);
+            ],422);
 
-        return $formation->etudiants()->where('etudiants.id',$request->etudiantId)->update([
+        return Etudiant::query()->find($request->etudiantId)->update([
                 'prenom'=>$request->prenom,
                 'nom'=>$request->nom,
                 'bac_type'=>$request->bacType,
                 'date_naissance'=>$request->dateNaissance,
+                'formation_id'=>$request->formationId
         ]);
     }
     public function delete(Request  $request){
@@ -50,6 +51,6 @@ class EtudiantController extends Controller
         return Etudiant::query()->find($request->etudiantId)->first();
     }
     public function all(Request  $request){
-        return Etudiant::query()->paginate(20);
+        return Etudiant::all();
     }
 }

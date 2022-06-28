@@ -24,7 +24,11 @@ class EtudiantPutRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'prenom'=>'required|alpha|min:5',
+            'nom'=>'required|alpha|min:5',
+            'bacType'=>'required|alpha',
+            'dateNaissance'=>'required:date',
+            'formationId'=>'required|numeric'
         ];
     }
 }

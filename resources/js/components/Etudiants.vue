@@ -264,24 +264,24 @@ export default {
     },
     created() {
         axios.get('etudiants')
-            .then(response=>this.etudiants=response.data.data)
+            .then(response=>this.etudiants=response.data)
             .catch(({response})=>{
                 this.errors= Object.values(response.data.errors).map(error=>error[0]);
             });
           axios.get('formations')
-            .then(response=>this.formations=response.data.data)
+            .then(response=>this.formations=response.data)
               .catch(({response})=>{
                   this.errors= Object.values(response.data.errors).map(error=>error[0]);
               });
     },
     methods:{
         showCreateEtudiantModel(){
-            let EtudiantModal = new bootstrap.Modal(document.getElementById('kt_modal_create_etudiant'));
+            let EtudiantModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_create_etudiant'));
             EtudiantModal.show();
             this.errors=[]
         },
         showUpdateEtudiantModel(id){
-            let etudiantModal = new bootstrap.Modal(document.getElementById('kt_modal_update_etudiant'));
+            let etudiantModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_update_etudiant'));
             let currentEtudiant=this.etudiants.find(etudiant=>etudiant.id==id)
             this.etudiant={
                 id:currentEtudiant.id,
@@ -295,7 +295,7 @@ export default {
             this.errors=[]
             etudiantModal.show()
         },
-         createEtudiant(){
+        createEtudiant(){
              axios.post('etudiants',
                 {
                     cne:this.etudiant.cne,
@@ -308,7 +308,7 @@ export default {
             )
                 .then(()=>{
 
-                    let etudiantModal = new bootstrap.Modal(document.getElementById('kt_modal_create_etudiant'));
+                    let etudiantModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_create_etudiant'));
                     etudiantModal.hide();
                     this.etudiant={
                         id:null,
@@ -337,6 +337,8 @@ export default {
                 }
                 )
                 .then(()=>{
+                    let etudiantModalsadas =bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_update_etudiant'));
+                    etudiantModalsadas.hide();
                     this.etudiant={
                         id:null,
                         cne:'',
@@ -347,8 +349,7 @@ export default {
                         formation:null
                     }
                     this.getAllEtudiants();
-                    let etudiantModal = new bootstrap.Modal(document.getElementById('kt_modal_update_formation'));
-                    etudiantModal.hide();
+
                 })
                 .catch(({response})=>{
                     this.errors= Object.values(response.data.errors).map(error=>error[0]);
@@ -365,13 +366,11 @@ export default {
         },
         getAllEtudiants(){
             axios.get('etudiants')
-                .then(response=>this.etudiants=response.data.data)
+                .then(response=>this.etudiants=response.data)
                 .catch(({response})=>{
                     this.errors= Object.values(response.data.errors).map(error=>error[0]);
                 });
         }
-
-
     }
 }
 </script>

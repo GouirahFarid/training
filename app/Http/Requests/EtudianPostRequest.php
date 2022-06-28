@@ -27,7 +27,7 @@ class EtudianPostRequest extends FormRequest
             'cne'=>'required|alpha_num|min:10|unique:etudiants',
             'prenom'=>'required|alpha|min:5',
             'nom'=>'required|alpha|min:5',
-            'bacType'=>'required|alpha|min:5',
+            'bacType'=>'required|alpha',
             'dateNaissance'=>'required:date',
             'formationId'=>'required|numeric'
         ];

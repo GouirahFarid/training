@@ -2,16 +2,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-    <meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-    <meta property="og:url" content="https://keenthemes.com/metronic" />
-    <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -26,29 +16,9 @@
     <link href="{{asset('/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet"  href="{{asset('css/app.css')}}">
 </head>
-<!--<body>
-<div id="app">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 bg-primary" style="height: 500px">
-                <ul>
-                    <li><router-link to="/etudiants">Go to Foo</router-link></li>
-                    <li><router-link to="/formations">Go to Fodadsao</router-link></li>
-                </ul>
-            </div>
-            <div class="col-8">
-                <div class="container">
-                    <router-view></router-view>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-</body>-->
-<!--begin::Body-->
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
-<div id="app" class="d-flex flex-column flex-root">
+    <div id="app" class="d-flex flex-column flex-root">
     <div class="page d-flex flex-row flex-column-fluid">
         <!--begin::Aside-->
         <v-aside></v-aside>
@@ -72,13 +42,7 @@
                         </div>
                     </div>
                     <!--end::Aside mobile toggle-->
-                    <!--begin::Mobile logo-->
-                    <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-                        <a href="index.html" class="d-lg-none">
-                            <img alt="Logo" src="assets/media/logos/logo-2.svg" class="h-30px" />
-                        </a>
-                    </div>
-                    <!--end::Mobile logo-->
+
                     <!--begin::Wrapper-->
                     <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
                         <!--begin::Navbar-->
@@ -95,181 +59,15 @@
 
                             <!--begin::User menu-->
                             <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
-                                <!--begin::Menu wrapper-->
-                                <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                                    <img src="assets/media/avatars/300-1.jpg" alt="user" />
-                                </div>
-                                <!--begin::User account menu-->
-                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-3">
-                                        <div class="menu-content d-flex align-items-center px-3">
-                                            <!--begin::Avatar-->
-                                            <div class="symbol symbol-50px me-5">
-                                                <img alt="Logo" src="assets/media/avatars/300-1.jpg" />
-                                            </div>
-                                            <!--end::Avatar-->
-                                            <!--begin::Username-->
-                                            <div class="d-flex flex-column">
-                                                <div class="fw-bolder d-flex align-items-center fs-5">Max Smith
-                                                    <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span></div>
-                                                <a href="#" class="fw-bold text-muted text-hover-primary fs-7">max@kt.com</a>
-                                            </div>
-                                            <!--end::Username-->
-                                        </div>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu separator-->
-                                    <div class="separator my-2"></div>
-                                    <!--end::Menu separator-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="account/overview.html" class="menu-link px-5">My Profile</a>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="apps/projects/list.html" class="menu-link px-5">
-                                            <span class="menu-text">My Projects</span>
-                                            <span class="menu-badge">
-														<span class="badge badge-light-danger badge-circle fw-bolder fs-7">3</span>
-													</span>
-                                        </a>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
-                                        <a href="#" class="menu-link px-5">
-                                            <span class="menu-title">My Subscription</span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <!--begin::Menu sub-->
-                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/referrals.html" class="menu-link px-5">Referrals</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/billing.html" class="menu-link px-5">Billing</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/statements.html" class="menu-link px-5">Payments</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
-                                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="View your statements"></i></a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu separator-->
-                                            <div class="separator my-2"></div>
-                                            <!--end::Menu separator-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <div class="menu-content px-3">
-                                                    <label class="form-check form-switch form-check-custom form-check-solid">
-                                                        <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-                                                        <span class="form-check-label text-muted fs-7">Notifications</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <!--end::Menu item-->
-                                        </div>
-                                        <!--end::Menu sub-->
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="account/statements.html" class="menu-link px-5">My Statements</a>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu separator-->
-                                    <div class="separator my-2"></div>
-                                    <!--end::Menu separator-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
-                                        <a href="#" class="menu-link px-5">
-													<span class="menu-title position-relative">Language
-													<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-													<img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="" /></span></span>
-                                        </a>
-                                        <!--begin::Menu sub-->
-                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html" class="menu-link d-flex px-5 active">
-														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
-														</span>English</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html" class="menu-link d-flex px-5">
-														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="assets/media/flags/spain.svg" alt="" />
-														</span>Spanish</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html" class="menu-link d-flex px-5">
-														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="assets/media/flags/germany.svg" alt="" />
-														</span>German</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html" class="menu-link d-flex px-5">
-														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="assets/media/flags/japan.svg" alt="" />
-														</span>Japanese</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html" class="menu-link d-flex px-5">
-														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="assets/media/flags/france.svg" alt="" />
-														</span>French</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                        </div>
-                                        <!--end::Menu sub-->
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5 my-1">
-                                        <a href="account/settings.html" class="menu-link px-5">Account Settings</a>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="authentication/flows/basic/sign-in.html" class="menu-link px-5">Sign Out</a>
-                                    </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu separator-->
-                                    <div class="separator my-2"></div>
-                                    <!--end::Menu separator-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <div class="menu-content px-5">
-                                            <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
-                                                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="index.html" />
-                                                <span class="pulse-ring ms-n1"></span>
-                                                <span class="form-check-label text-gray-600 fs-7">Dark Mode</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <!--end::Menu item-->
-                                </div>
-                                <!--end::User account menu-->
+                                <a href="{{ url('/logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                                 <!--end::Menu wrapper-->
                             </div>
                             <!--end::User menu-->
@@ -308,16 +106,16 @@
         </div>
     </div>
 </div>
-<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
-<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
-<script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-<script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
-<script src="{{asset('assets/js/widgets.bundle.js')}}"></script>
-<script src="{{asset('assets/js/custom/widgets.js')}}"></script>
-<script src="{{asset('assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
-<script src="{{asset('assets/js/custom/utilities/modals/create-app.js')}}"></script>
-<script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+    <script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+    <script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+    <script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+    <script src="{{asset('assets/js/widgets.bundle.js')}}"></script>
+    <script src="{{asset('assets/js/custom/widgets.js')}}"></script>
+    <script src="{{asset('assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
+    <script src="{{asset('assets/js/custom/utilities/modals/create-app.js')}}"></script>
+    <script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 <!--end::Body-->
 </html>

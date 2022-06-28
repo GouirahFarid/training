@@ -170,30 +170,32 @@ export default {
     },
     created() {
         axios.get('formations')
-            .then(response=>this.formations=response.data.data)
+            .then((response)=> this.formations=response.data)
             .catch(({response})=>{
                 this.errors= Object.values(response.data.errors).map(error=>error[0]);
             });
     },
     methods:{
         showCreateFormationModel(){
-            let formationModal = new bootstrap.Modal(document.getElementById('kt_modal_create_formation'));
+            let createFormationModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_create_formation'));
             this.errors=[]
-            formationModal.show()
+            createFormationModal.show()
         },
         showUpdateFormationModel(id){
-            let formationModal = new bootstrap.Modal(document.getElementById('kt_modal_create_formation'));
+            let updateFormationModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_update_formation'));
             let currentFormation=this.formations.find(formation=>formation.id==id)
             this.formation.id=currentFormation.id;
             this.formation.titre=currentFormation.titre;
             this.formation.heures=currentFormation.heures;
             this.errors=[]
-            formationModal.show()
+            updateFormationModal.show()
         },
         createFormation(){
-            axios.post('formations',{titre:this.formation.titre,heures:this.formation.heures})
+            axios.post('formations',
+                {titre:this.formation.titre,heures:this.formation.heures}
+            )
                 .then(()=>{
-                    let formationModal = new bootstrap.Modal(document.getElementById('kt_modal_create_formation'));
+                    let formationModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_create_formation'));
                     formationModal.hide();
                     this.formation.titre='';
                     this.formation.heures='';
@@ -207,7 +209,7 @@ export default {
         UpdateFormation(){
             axios.put(`formations/${this.formation.id}`,{titre:this.formation.titre,heures:this.formation.heures})
                 .then(()=>{
-                    let formationModal = new bootstrap.Modal(document.getElementById('kt_modal_create_formation'));
+                    let formationModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('kt_modal_update_formation'));
                     formationModal.hide();
                     this.formation.id=null;
                     this.formation.titre='';
@@ -231,7 +233,7 @@ export default {
         },
         getAllFormations(){
             axios.get('formations')
-                .then(response=>this.formations=response.data.data)
+                .then(response=>this.formations=response.data)
                 .catch(({response})=>{
                     this.errors= Object.values(response.data.errors).map(error=>error[0]);
                 });
